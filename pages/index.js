@@ -33,10 +33,7 @@ export default function Home() {
                    <Image src={profile.coverPicture.original.url} width="300" height="300" alt="pic"/>
                 ) :
                 (
-                  <div style={{
-                    width: "300",
-                    height: "300",
-                    background: "purple"
+                  <div style={{width: "300",height: "300",background: "purple"
                   }}
                   
                   />

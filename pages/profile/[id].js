@@ -26,7 +26,7 @@ export default function profile(){
             setProfile(response.data.profiles.items[0])
 
             const publicationData = await client.query(getPublications, {id}).toPromise()
-            console.log('PublicationsManenos:', publicationData);
+            console.log('Publications:', publicationData);
             setPubs(publicationData.data.publications.items)
         }catch(err){
             
