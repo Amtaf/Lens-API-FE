@@ -9,6 +9,7 @@ const nextConfig = {
       'statics-polygon-lens.s3.eu-west-1.amazonaws.com',
       'cf-ipfs.com',
       'lens.infura-ipfs.io',
+      'gateway.ipfs.io',
       ''
     ]
   }
