@@ -1,4 +1,5 @@
 import {useRouter} from 'next/router'
+import Link from 'next/link'
 import { useState,useEffect } from 'react'
 import {client,getProfiles,getPublications} from '../../api'
 import Image from 'next/image'
@@ -75,8 +76,8 @@ export default function profile(){
             </div>
 
            <div style={{display: "flex",justifyContent:"space-between",alignItems:"center", padding:"15px"}}>
-           <button onClick={connect} style={{backgroundColor: "Green", color:"white", padding: "10px" , fontSize: "16px", borderRadius: "4px", width:"150px"}}>Connect</button>
-            <button onClick={followUser} style={{backgroundColor: "Green", color:"white", padding: "10px" , fontSize: "16px", borderRadius: "4px", width:"150px"}}>Follow</button>
+           <button onClick={connect} style={{backgroundColor: "#00501E", color:"#ABFE2C", padding: "10px" , fontSize: "16px", borderRadius: "4px", width:"150px"}}>Connect</button>
+            <button onClick={followUser} style={{backgroundColor: "#00501E", color:"#ABFE2C", padding: "10px" , fontSize: "16px", borderRadius: "4px", width:"150px"}}>Follow</button>
            </div>
             
             <div style={{display: "flex",justifyContent:"space-between"}}>
@@ -90,9 +91,12 @@ export default function profile(){
             <p>
                 <h2>Publications</h2>
                 {pubs.map((pub,index)=>(
+                    
                 <div style={{padding: '20px', borderTop: '1px solid pink'}}>{pub.metadata.content}</div>
+                
             )
-            )}</p>
+            )}
+                </p>
             
         </div>
     )
