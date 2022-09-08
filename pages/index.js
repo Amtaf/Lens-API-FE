@@ -1,6 +1,6 @@
 import { isTypeSystemDefinitionNode } from 'graphql'
 import {useState,useEffect} from 'react'
-import {client, recommendProfiles,profileSearch, getPublications} from '../api'
+import {client, recommendProfiles,profileSearch} from '../api'
 import Link from 'next/link'
 import Image from 'next/image'
 
@@ -26,9 +26,7 @@ export default function Home() {
     try{
       const response = await client.query(profileSearch,{query: search, type: 'PROFILE'}).toPromise()
       const profileData = await Promise.all(response.data.search.items.map(async profile=>{
-        const publctn = await client.query(getPublications,{id: profile.profileId, limit: 1}).toPromise() 
         profile.id = profile.profileId
-        profile.publication = publctn.data.publications.items[0]
         return profile
       }))
       setProfiles(profileData)
