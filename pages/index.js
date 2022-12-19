@@ -40,7 +40,7 @@ export default function Home() {
     
     
     <div>
-      <h2>Pro<span style={{color:"#ABFE2C"}}>Lensers</span> 🌿</h2>
+      <h2>Pri<span style={{color:"#ABFE2C"}}>mero3</span> 🌿</h2>
       <div style={{display: "flex", alignItems:"left"}}>
       <input type="text" placeholder="Search Profile" onChange={e=>setSearch(e.target.value)} value={search} />
       <button onClick={searchProfile} style={{backgroundColor: "#00501E", color:"#ABFE2C", padding: "10px" , fontSize: "16px", borderRadius: "4px", width:"150px"}}>Search Profile</button>
